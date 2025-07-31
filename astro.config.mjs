@@ -8,5 +8,8 @@ export default defineConfig({
   base: `/`,
   vite: {
     plugins: [tailwindcss()]
+  },
+  devToolbar: {
+    enabled: false
   }
 });

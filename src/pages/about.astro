@@ -3,44 +3,46 @@ import Layout from "../layouts/layout.astro";
 ---
 
 <Layout>
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h1 class="text-4xl font-bold mb-6 text-center">Sobre Nosotros</h1>
+  <section class="h-screen flex flex-col items-center justify-center bg-cover bg-center text-center" style="background-image: url('FotosIngame/Foto7.png');">
+    <h1 class="game-title text-4xl font-bold mb-6 text-center">Sobre Nosotros</h1>
+    
+    <div class=" items-center justify-center text-center">
+        <div class="mb-8 ">
+        <p class="text-lg leading-relaxed">
+            Somos un equipo de estudiantes de Ingeniería en Computación e
+            Informática de la Universidad del BioBio. Nuestro proyecto de título
+            consiste en el desarrollo de un videojuego narrativo enfocado en el
+            aprendizaje pasivo de la lógica de programación.
+        </p>
+        </div>
 
-    <div class="mb-8">
-      <p class="text-lg leading-relaxed">
-        Somos un equipo de estudiantes de Ingeniería en Computación e
-        Informática de la Universidad del BioBio. Nuestro proyecto de título
-        consiste en el desarrollo de un videojuego narrativo enfocado en el
-        aprendizaje pasivo de la lógica de programación.
-      </p>
-    </div>
+        <div class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">¿Cuál es el objetivo?</h2>
+        <p class="text-base leading-relaxed">
+            El objetivo principal es ofrecer una experiencia inmersiva donde el
+            jugador aprenda conceptos básicos de lógica de programación mientras
+            explora y resuelve desafíos dentro del juego. Utilizamos mecánicas
+            narrativas, rompecabezas y elementos visuales inspirados en los pecados
+            capitales para desarrollar una narrativa significativa y educativa.
+        </p>
+        </div>
 
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">¿Cuál es el objetivo?</h2>
-      <p class="text-base leading-relaxed">
-        El objetivo principal es ofrecer una experiencia inmersiva donde el
-        jugador aprenda conceptos básicos de lógica de programación mientras
-        explora y resuelve desafíos dentro del juego. Utilizamos mecánicas
-        narrativas, rompecabezas y elementos visuales inspirados en los pecados
-        capitales para desarrollar una narrativa significativa y educativa.
-      </p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold mb-4">¿Quiénes somos?</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        Si bien ambos aportamos con ideas sobre todo el proyecto, nos dividimos
-        principalmente de esta forma:
-        <div><li>
-          <strong>💻 Daniel: </strong>
-          Programador y diseñador de mecánicas de juego.
-        </li></div>
-        
-        <li>
-          <strong>🎨 Diego: </strong>
-          Programador y  artista principal.
-        </li>
-      </ul>
+        <div>
+        <h2 class="text-2xl font-semibold mb-4">¿Quiénes somos?</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            Si bien ambos aportamos con ideas sobre todo el proyecto, nos dividimos
+            principalmente de esta forma:
+            <div><li>
+            <strong>💻 Daniel: </strong>
+            Programador y diseñador de mecánicas de juego.
+            </li></div>
+            
+            <li>
+            <strong>🎨 Diego: </strong>
+            Programador y  artista principal.
+            </li>
+        </ul>
+        </div>
     </div>
   </section>
 </Layout>

@@ -2,81 +2,61 @@
 import Layout from '../layouts/layout.astro';
 ---
 
-<Layout title="Proyecto Tesis" >
-	<!-- Contenedor solo del área principal -->
-	<div class="absolute top-0 left-0 w-full h-[100vh] bg-no-repeat bg-center opacity-50 -z-10"
-		style="background-image: url('FondoPagina.png'); background-size: 200vh 110vh;">
-	</div>
+<Layout title="Proyecto Tesis">
 
-	<div class="relative text-center w-screen h-[92vh] overflow-hidden ">
-		<!-- Contenido sobre la imagen -->
-		<div class="relative z-10 flex flex-col items-center justify-center h-full">
-			
-			<p class="text-lg mb-6"> Este juego busca enseñar lógica de programación mediante narrativa.</p>
-			<button onclick="window.location.href='https://store.steampowered.com/'" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-				Wishlist Now!!
-			</button>
+  <!-- Fondo principal con todo el contenido centrado -->
+  <div class="h-screen flex flex-col items-center justify-center bg-cover bg-center text-center" style="background-image: url('FotosIngame/Foto12.png');">
+    
+    <h1 class="game-title">Lynn's Machine</h1>
+    <p class="game-text">
+      Un juego que busca reimaginar la lógica de programación mediante una narrativa.
+    </p>
 
+    <button 
+      onclick="window.location.href='https://store.steampowered.com/'" 
+      type="button" 
+      class= "game-text mt-6 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+      Wishlist Now!!
+    </button>
 
-			<div id= "scrollHint" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center animate-bounce">
-				<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width  ="2"
-					viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-				</svg> 
-				<p  class="text-white text-sm mt-2 transition-opacity duration-300">
-					Desliza hacia abajo
-				</p>
-			</div>
+    <!-- Desliza hacia abajo -->
+    <div id="scrollHint" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+      <p class="text-white text-sm transition-opacity duration-300">
+        Desliza hacia abajo
+      </p>
+    </div>
+    
+  </div>
 
-		</div>
-
-		<div class=" opacity-10 fixed inset-0 z-50 pointer-events-none">
-			<img src="/CrtFilter.png" alt="CRT Filter" class="w-full h-full object-cover" />
-		</div>
-	</div>
-
-		<div class="relative w-full h-[42vh] bg-no-repeat bg-center bg-cover "></div>
-		<div class="relative w-full h-[100vh] bg-no-repeat bg-center bg-cover "
-			style="background-image: url('Fondo.png');">
-			<div class="flex flex-col items-center justify-center h-[50vh] text-white text-center px-4">
-				<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo2.jpg" alt="">
-					</div>
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo1.jpg" alt="">
-						<img class="mt-[4.5vh] h-auto max-w-full rounded-lg" src="Dibujos/Dibujo4.jpg" alt="">
-					</div>
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo3.jpg" alt="">
-					</div>
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego2.png" alt="">
-					</div>
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego1.png" alt="">
-					</div>
-					<div>
-						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego3.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
+  <!-- Sección siguiente -->
+  <div class="h-screen w-screen flex flex-col items-center justify-center bg-cover bg-center text-center" style="background-image: url('FotosIngame/Foto13.png');">
+    <div class="game-text flex flex-col items-center justify-center text-center w-[98vh]">
+      El mundo previo a la historia del juego está ambientado en los años 80s, con la estética retro y la tecnología de la época. Es aquí donde un científico, con el nombre de H. Brundle comienza a realizar experimentos de todo tipo, especialmente de robótica. Los experimentos más macabros destacan por utilizar humanos intentando convertirlos en máquinas. Bajo este contexto, estalla una guerra mundial y la raza humana se ve amenazada con la extinción. Brundle mantenía una ayudante en su laboratorio, la protagonista del videojuego, y cuando las cosas comenzaron a ponerse feas, por algún motivo [REDACTED] le pidió criogenizarse, mientras él buscaba una solución o continuaba con sus experimentos.
+    </div>
+  </div>
+  <div class="h-[80vh] w-screen bg-no-repeat bg-left bg-[length:50%_100%]" 
+     style="background-image: url('Dibujos/Dibujo1.jpg'), url('Dibujos/Dibujo6.jpeg'); 
+            background-position: left center, right center; 
+            background-repeat: no-repeat; 
+            background-size: 50% 100%, 50% 100%;">
+    <!-- Contenido aquí -->
+  </div>
 
 </Layout>
 
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const scrollHint = document.getElementById("scrollHint");
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollHint = document.getElementById("scrollHint");
+    if (!scrollHint) return;
 
-		if (!scrollHint) return; // seguridad adicional
-
-		window.addEventListener("scroll", () => {
-		const maxScroll = 500; // píxeles máximos para opacidad
-		const scrollY = window.scrollY;
-
-		const opacity = Math.max(0, 1 - scrollY / maxScroll);
-		scrollHint.style.opacity = opacity.toFixed(2);
-		});
-	});
+    window.addEventListener("scroll", () => {
+      const maxScroll = 500;
+      const scrollY = window.scrollY;
+      const opacity = Math.max(0, 1 - scrollY / maxScroll);
+      scrollHint.style.opacity = opacity.toFixed(2);
+    });
+  });
 </script>
