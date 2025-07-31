@@ -57,3 +57,21 @@ import "../styles/global.css";
     padding: 1rem;
   }
 </style>
+
+<script>
+  const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fadeIn');
+        entry.target.classList.remove('opacity-0');
+        observer.unobserve(entry.target); // solo animar una vez
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>

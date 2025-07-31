@@ -4,20 +4,79 @@ import Layout from '../layouts/layout.astro';
 
 <Layout title="Proyecto Tesis" >
 	<!-- Contenedor solo del área principal -->
-	<div class="absolute inset-0 bg-cover bg-center opacity-40 -z-10"
-			style="background-image: url('/bobesponja.jpg');">
-		</div>
-	<div class="relative text-center h-screen overflow-hidden">
-		<!-- Imagen de fondo -->
+	<div class="absolute top-0 left-0 w-full h-[100vh] bg-no-repeat bg-center opacity-50 -z-10"
+		style="background-image: url('FondoPagina.png'); background-size: 200vh 110vh;">
+	</div>
 
+	<div class="relative text-center w-screen h-[92vh] overflow-hidden ">
 		<!-- Contenido sobre la imagen -->
 		<div class="relative z-10 flex flex-col items-center justify-center h-full">
-		<p class="text-lg mb-6">
-			Este juego busca enseñar lógica de programación mediante narrativa.
-		</p>
-		<button class="btn neon-pulse">
-			<span>¡Inicia Aquí!</span>
-		</button>
+			
+			<p class="text-lg mb-6"> Este juego busca enseñar lógica de programación mediante narrativa.</p>
+			<button onclick="window.location.href='https://store.steampowered.com/'" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+				Wishlist Now!!
+			</button>
+
+
+			<div id= "scrollHint" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center animate-bounce">
+				<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width  ="2"
+					viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+				</svg> 
+				<p  class="text-white text-sm mt-2 transition-opacity duration-300">
+					Desliza hacia abajo
+				</p>
+			</div>
+
+		</div>
+
+		<div class=" opacity-10 fixed inset-0 z-50 pointer-events-none">
+			<img src="/CrtFilter.png" alt="CRT Filter" class="w-full h-full object-cover" />
 		</div>
 	</div>
+
+		<div class="relative w-full h-[42vh] bg-no-repeat bg-center bg-cover "></div>
+		<div class="relative w-full h-[100vh] bg-no-repeat bg-center bg-cover "
+			style="background-image: url('Fondo.png');">
+			<div class="flex flex-col items-center justify-center h-[50vh] text-white text-center px-4">
+				<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo2.jpg" alt="">
+					</div>
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo1.jpg" alt="">
+						<img class="mt-[4.5vh] h-auto max-w-full rounded-lg" src="Dibujos/Dibujo4.jpg" alt="">
+					</div>
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Dibujo3.jpg" alt="">
+					</div>
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego2.png" alt="">
+					</div>
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego1.png" alt="">
+					</div>
+					<div>
+						<img class="h-auto max-w-full rounded-lg" src="Dibujos/Juego3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
 </Layout>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const scrollHint = document.getElementById("scrollHint");
+
+		if (!scrollHint) return; // seguridad adicional
+
+		window.addEventListener("scroll", () => {
+		const maxScroll = 500; // píxeles máximos para opacidad
+		const scrollY = window.scrollY;
+
+		const opacity = Math.max(0, 1 - scrollY / maxScroll);
+		scrollHint.style.opacity = opacity.toFixed(2);
+		});
+	});
+</script>
