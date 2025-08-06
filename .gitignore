@@ -75,3 +75,6 @@ crashlytics-build.properties
 
 #node modules
 node_modules
+
+#astro config
+astro.config.mjs

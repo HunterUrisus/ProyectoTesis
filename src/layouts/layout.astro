@@ -1,6 +1,6 @@
 ---
 // Importa props (contenido y título por ejemplo)
-const { title = "Proyecto Tesis", baseURL="" } = Astro.props;
+const { title = "Lynn's Machine", baseURL="" } = Astro.props;
 import "../styles/global.css";
 ---
 
@@ -16,9 +16,9 @@ import "../styles/global.css";
         <header class="bg-gray-900 text-white py-4 shadow-md w-full">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
             <h1 class="text-xl font-bold">
-            <a href="/">Double D Games</a>
+            <a class="game-font text-4xl"href="/">Double D Games</a>
             </h1>
-            <nav class="space-x-4">
+            <nav class="space-x-4 game-paragraph">
             <a href="/" class="hover:underline">Inicio</a>
             <a href="/about" class="hover:underline">Sobre Nosotros</a>
             <a href="/gallery" class="hover:underline">Galeria</a>
@@ -31,7 +31,7 @@ import "../styles/global.css";
         </main>
 
         <footer class="p-4 w-full text-white">
-            <p class="text-lg m-6">© 2025 DDGames Company</p>
+            <p class="game-paragraph text-lg m-6">© 2025 DDGames Company</p>
         </footer>
     </body>
     </html>
